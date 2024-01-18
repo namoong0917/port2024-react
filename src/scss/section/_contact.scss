@@ -10,6 +10,10 @@
     justify-content: flex-end;
     flex-direction: column;
 
+    @media (max-width: 800px) {
+      justify-content: center;
+    }
+
     .contact_title {
       font-size: 10vw;
       text-transform: uppercase;
@@ -53,6 +57,7 @@
       }
     }
     .contact_lines {
+      width: 100%;
       .line {
         display: block;
         width: 100%;
