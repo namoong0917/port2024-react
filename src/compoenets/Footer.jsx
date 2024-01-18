@@ -1,27 +1,5 @@
 import React from "react";
-
-const footerText = [
-  {
-    title: "github",
-    desc: "깃허브에 오시면 더 많은 소스를 볼 수 있습니다.",
-    link: "https://github.com/namoong0917",
-  },
-  {
-    title: "blog",
-    desc: "블로그에 오시면 더 많은 정보를 볼 수 있습니다.",
-    link: "https://south-dev.tistory.com/",
-  },
-  {
-    title: "notion",
-    desc: "노션에 오시면 study-log를 볼 수 있습니다.",
-    link: "https://www.notion.so/study-Log-a9f88db6a8f24f54aeaa01609795ac67",
-  },
-  {
-    title: "three.js",
-    desc: "three.js 로 만든 유리구슬",
-    link: "https://glassbead.netlify.app/",
-  },
-];
+import { FOOTER_TEXT } from "../constants";
 
 const Footer = () => {
   return (
@@ -41,8 +19,8 @@ const Footer = () => {
           <div className="right">
             <h3>social</h3>
             <ul>
-              {footerText.map((footer, key) => (
-                <li key={key}>
+              {FOOTER_TEXT.map((footer, index) => (
+                <li key={index}>
                   <a href={footer.link}>{footer.title}</a>
                   <em>{footer.desc}</em>
                 </li>

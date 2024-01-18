@@ -1,16 +1,5 @@
 import React from "react";
-
-const contactText = [
-  {
-    link: "#",
-    title: "KAKAO : milktree123",
-  },
-  {
-    link: "https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=namoong0917@gmail.com",
-
-    title: "mail : namoong0917@GMAIL.COM",
-  },
-];
+import { CONTACT_TEXT } from "../constants";
 
 const contact = () => {
   return (
@@ -19,8 +8,8 @@ const contact = () => {
         <h2 className="contact_title">Contact</h2>
         <div className="contact_text">
           <div className="text">
-            {contactText.map((contact, key) => (
-              <div key={key}>
+            {CONTACT_TEXT.map((contact, index) => (
+              <div key={index}>
                 <a
                   href={contact.link}
                   target="_blank"

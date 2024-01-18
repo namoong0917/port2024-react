@@ -1,31 +1,8 @@
 import React, { useState } from "react";
-
-const headerNav = [
-  {
-    title: "intro",
-    url: "#intro",
-  },
-  {
-    title: "skill",
-    url: "#skill",
-  },
-  {
-    title: "site",
-    url: "#site",
-  },
-  {
-    title: "portfolio",
-    url: "#port",
-  },
-  {
-    title: "contact",
-    url: "#contact",
-  },
-];
+import { HEADER_NAV } from "../constants";
 
 const Header = () => {
   const [show, setShow] = useState(false);
-
   const toggleMenu = () => {
     setShow((prevShow) => !prevShow);
   };
@@ -46,8 +23,8 @@ const Header = () => {
           aria-label="메인메뉴"
         >
           <ul>
-            {headerNav.map((nav, key) => (
-              <li key={key}>
+            {HEADER_NAV.map((nav, index) => (
+              <li key={index}>
                 <a href={nav.url}>{nav.title}</a>
               </li>
             ))}

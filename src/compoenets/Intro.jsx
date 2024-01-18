@@ -1,16 +1,12 @@
 import React from "react";
-import about from "../assets/img/love.png";
-
-const introText = {
-  title: "port developer",
-  desc: ["talent is", "found at the end of the", "effort"],
-};
+import aboutImg from "../assets/img/love.png";
+import { INTRO_TEXT } from "../constants";
 
 const Intro = () => {
   return (
     <section id="intro">
       <div className="intro_inner">
-        <h1 className="intro_title">{introText.title}</h1>
+        <h1 className="intro_title">{INTRO_TEXT.title}</h1>
         <div className="intro_lines" aria-hidden="true">
           <span className="line"></span>
           <span className="line"></span>
@@ -22,12 +18,12 @@ const Intro = () => {
         </div>
         <div className="intro_text">
           <div className="text_wrap">
-            <div>{introText.desc[0]}</div>
-            <div>{introText.desc[1]}</div>
-            <div>{introText.desc[2]}</div>
+            <div>{INTRO_TEXT.desc[0]}</div>
+            <div>{INTRO_TEXT.desc[1]}</div>
+            <div>{INTRO_TEXT.desc[2]}</div>
           </div>
           <div className="img_wrap">
-            <img src={about} alt="어바웃" />
+            <img src={aboutImg} alt="어바웃" />
           </div>
         </div>
         <div className="intro_lines bottom" aria-hidden="true">
